@@ -1,0 +1,23 @@
+{
+  "id": "duplex_2",
+  "name": "Duplex_2",
+  "models": [
+      {
+          "id": "design_2",
+          "name": "Duplex_2 Design"
+      }
+  ],
+  "viewerConfigs": {
+  },
+  "viewerContent": {
+      "modelsLoaded": [
+          "design"
+      ]
+  },
+  "viewerState": {
+      "tabOpen": "classes",
+      "expandObjectsTree": 1,
+      "expandClassesTree": 1,
+      "expandStoreysTree": 1
+  }
+}
