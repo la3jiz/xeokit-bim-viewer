@@ -3,8 +3,8 @@
   "name": "Duplex_2",
   "models": [
       {
-          "id": "design_2",
-          "name": "Duplex_2 Design"
+          "id": "design",
+          "name": "Duplex Design"
       }
   ],
   "viewerConfigs": {
