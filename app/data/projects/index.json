@@ -5,6 +5,10 @@
       "name": "Duplex"
     },
     {
+      "id": "house",
+      "name": "House"
+    },
+    {
       "id": "Schependomlaan",
       "name": "Schependomlaan"
     },
