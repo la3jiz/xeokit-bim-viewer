@@ -1,10 +1,10 @@
 {
-  "id": "duplex_2",
-  "name": "Duplex_2",
+  "id": "house",
+  "name": "House",
   "models": [
       {
-          "id": "design_2",
-          "name": "Duplex_2 Design"
+          "id": "design",
+          "name": "House Design"
       }
   ],
   "viewerConfigs": {
