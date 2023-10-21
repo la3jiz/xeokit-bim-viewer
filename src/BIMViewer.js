@@ -26,7 +26,7 @@ import {ObjectsKdTree3} from "./collision/ObjectsKdTree3.js";
 import {MarqueeSelectionTool} from "./toolbar/MarqueeSelectionTool.js";
 import {MeasureDistanceTool} from "./toolbar/MeasureDistanceTool.js";
 import {MeasureAngleTool} from "./toolbar/MeasureAngleTool.js";
-import { ProvestaCustomComments } from "./toolbar/ProvestaCustomComments.js";
+
 
 const hideEdgesMinDrawCount = 5; // FastNavPlugin enables dynamic edges when xeokit's per-frame draw count drops below this
 const scaleCanvasResolutionMinDrawCount = 1000; // FastNavPlugin switches to low-res canvas when xeokit's per-frame draw count rises above this
@@ -105,7 +105,6 @@ function createToolbarTemplate(cfg = {}) {
         <button type="button" class="xeokit-i18n xeokit-marquee xeokit-btn fas fa-object-group fa-2x disabled" data-xeokit-i18ntip="toolbar.marqueeSelectTip" data-tippy-content="Marquee select objects"></button>`
         + (cfg.enableMeasurements ? `<!-- Measure distance tool button -->
         <button type="button" class="xeokit-i18n xeokit-measure-distance xeokit-btn fa fa-ruler fa-2x disabled" data-xeokit-i18ntip="toolbar.measureDistanceTip" data-tippy-content="Measure distance"></button>  
-       
           <!-- Measure angle tool button -->
         <button type="button" class="xeokit-i18n xeokit-measure-angle xeokit-btn fa fa-chevron-left fa-2x disabled" data-xeokit-i18ntip="toolbar.measureAngleTip" data-tippy-content="Measure angle"></button>`
             : ` `)
@@ -116,9 +115,7 @@ function createToolbarTemplate(cfg = {}) {
             </div>
             <div class="xeokit-i18n xeokit-section-counter" data-xeokit-i18ntip="toolbar.numSlicesTip" data-tippy-content="Number of existing slices"></div>
         </button>
-        <!-- comments tool button -->
-        <button type="button" class="xeokit-i18n xeokit-measure-angle xeokit-btn fa fa-chevron-left fa-2x disabled" data-xeokit-i18ntip="toolbar.measureAngleTip" data-tippy-content="Measure angle"></button>
-            </div>
+    </div>
 </div>`;
     return toolbarTemplate;
 }
@@ -406,10 +403,6 @@ class BIMViewer extends Controller {
             active: false
         });
 
-        this._provestaCustomComments = new ProvestaCustomComments(this, {
-            buttonElement: toolbarElement.querySelector(".xeokit-measure-angle"),
-            active: false
-        });
         this._measureDistanceTool = new MeasureDistanceTool(this, {
             buttonElement: toolbarElement.querySelector(".xeokit-measure-distance"),
             active: false
@@ -458,7 +451,6 @@ class BIMViewer extends Controller {
             this._marqueeSelectionTool,
             this._sectionTool,
             this._measureDistanceTool,
-            this._provestaCustomComments,
             this._measureAngleTool
         ]);
 
@@ -1910,7 +1902,6 @@ class BIMViewer extends Controller {
         this._marqueeSelectionTool.setEnabled(enabled);
         this._showSpacesMode.setEnabled(enabled);
         this._measureDistanceTool.setEnabled(enabled);
-        this._provestaCustomComments.setEnabled(enabled);
         this._measureAngleTool.setEnabled(enabled);
         this._sectionTool.setEnabled(enabled);
 
@@ -2007,7 +1998,6 @@ class BIMViewer extends Controller {
      */
     clearMeasurements() {
         this._measureDistanceTool.clear();
-        this._provestaCustomComments.clear();
         this._measureAngleTool.clear();
     }
 
