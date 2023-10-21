@@ -106,7 +106,7 @@ function createToolbarTemplate(cfg = {}) {
         + (cfg.enableMeasurements ? `<!-- Measure distance tool button -->
         <button type="button" class="xeokit-i18n xeokit-measure-distance xeokit-btn fa fa-ruler fa-2x disabled" data-xeokit-i18ntip="toolbar.measureDistanceTip" data-tippy-content="Measure distance"></button>  
         <!-- comments tool button -->
-          <button type="button" class="xeokit-i18n xeokit-measure-distance xeokit-btn fa fa-comment fa-2x disabled" data-xeokit-i18ntip="toolbar.commentTip" data-tippy-content="Comment"></button>  
+          <button type="button" class="xeokit-i18n xeokit-comment xeokit-btn fa fa-comment fa-2x disabled" data-xeokit-i18ntip="toolbar.commentTip" data-tippy-content="Comment"></button>  
           <!-- Measure angle tool button -->
         <button type="button" class="xeokit-i18n xeokit-measure-angle xeokit-btn fa fa-chevron-left fa-2x disabled" data-xeokit-i18ntip="toolbar.measureAngleTip" data-tippy-content="Measure angle"></button>`
             : ` `)
@@ -410,7 +410,7 @@ class BIMViewer extends Controller {
             active: false
         });
         this._measureDistanceTool = new MeasureDistanceTool(this, {
-            buttonElement: toolbarElement.querySelector(".xeokit-measure-distance"),
+            buttonElement: toolbarElement.querySelector(".xeokit-comment"),
             active: false
         });
 
