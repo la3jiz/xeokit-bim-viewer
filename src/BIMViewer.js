@@ -117,8 +117,8 @@ function createToolbarTemplate(cfg = {}) {
             <div class="xeokit-i18n xeokit-section-counter" data-xeokit-i18ntip="toolbar.numSlicesTip" data-tippy-content="Number of existing slices"></div>
         </button>
         <!-- comments tool button -->
-        <button type="button" class="xeokit-i18n xeokit-comment xeokit-btn fa fa-comment fa-2x disabled" data-xeokit-i18ntip="toolbar.commentTip" data-tippy-content="Comment"></button>  
-    </div>
+        <button type="button" class="xeokit-i18n xeokit-measure-angle xeokit-btn fa fa-chevron-left fa-2x disabled" data-xeokit-i18ntip="toolbar.measureAngleTip" data-tippy-content="Measure angle"></button>
+            </div>
 </div>`;
     return toolbarTemplate;
 }
@@ -407,11 +407,11 @@ class BIMViewer extends Controller {
         });
 
         this._provestaCustomComments = new ProvestaCustomComments(this, {
-            buttonElement: toolbarElement.querySelector(".xeokit-measure-distance"),
+            buttonElement: toolbarElement.querySelector(".xeokit-measure-angle"),
             active: false
         });
         this._measureDistanceTool = new MeasureDistanceTool(this, {
-            buttonElement: toolbarElement.querySelector(".xeokit-comment"),
+            buttonElement: toolbarElement.querySelector(".xeokit-measure-distance"),
             active: false
         });
 
