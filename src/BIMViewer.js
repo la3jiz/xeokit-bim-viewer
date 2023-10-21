@@ -105,8 +105,7 @@ function createToolbarTemplate(cfg = {}) {
         <button type="button" class="xeokit-i18n xeokit-marquee xeokit-btn fas fa-object-group fa-2x disabled" data-xeokit-i18ntip="toolbar.marqueeSelectTip" data-tippy-content="Marquee select objects"></button>`
         + (cfg.enableMeasurements ? `<!-- Measure distance tool button -->
         <button type="button" class="xeokit-i18n xeokit-measure-distance xeokit-btn fa fa-ruler fa-2x disabled" data-xeokit-i18ntip="toolbar.measureDistanceTip" data-tippy-content="Measure distance"></button>  
-        <!-- comments tool button -->
-          <button type="button" class="xeokit-i18n xeokit-comment xeokit-btn fa fa-comment fa-2x disabled" data-xeokit-i18ntip="toolbar.commentTip" data-tippy-content="Comment"></button>  
+       
           <!-- Measure angle tool button -->
         <button type="button" class="xeokit-i18n xeokit-measure-angle xeokit-btn fa fa-chevron-left fa-2x disabled" data-xeokit-i18ntip="toolbar.measureAngleTip" data-tippy-content="Measure angle"></button>`
             : ` `)
@@ -117,6 +116,8 @@ function createToolbarTemplate(cfg = {}) {
             </div>
             <div class="xeokit-i18n xeokit-section-counter" data-xeokit-i18ntip="toolbar.numSlicesTip" data-tippy-content="Number of existing slices"></div>
         </button>
+        <!-- comments tool button -->
+        <button type="button" class="xeokit-i18n xeokit-comment xeokit-btn fa fa-comment fa-2x disabled" data-xeokit-i18ntip="toolbar.commentTip" data-tippy-content="Comment"></button>  
     </div>
 </div>`;
     return toolbarTemplate;
