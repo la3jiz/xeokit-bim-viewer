@@ -1,20 +1,23 @@
 {
   "id": "test",
-  "name": "Test",
+  "name": "test",
   "models": [
-    {
-      "id": "design",
-      "name": "Test Design"
-    }
+      {
+          "id": "design",
+          "name": "test Design"
+      }
   ],
-  "viewerConfigs": {},
+  "viewerConfigs": {
+  },
   "viewerContent": {
-    "modelsLoaded": ["design"]
+      "modelsLoaded": [
+          "design"
+      ]
   },
   "viewerState": {
-    "tabOpen": "classes",
-    "expandObjectsTree": 1,
-    "expandClassesTree": 1,
-    "expandStoreysTree": 1
+      "tabOpen": "classes",
+      "expandObjectsTree": 1,
+      "expandClassesTree": 1,
+      "expandStoreysTree": 1
   }
 }
