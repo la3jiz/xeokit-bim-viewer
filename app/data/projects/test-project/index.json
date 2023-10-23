@@ -1,10 +1,10 @@
 {
-  "id": "test",
-  "name": "test",
+  "id": "test-project",
+  "name": "test-project",
   "models": [
       {
           "id": "design",
-          "name": "test Design"
+          "name": "test-project Design"
       }
   ],
   "viewerConfigs": {
